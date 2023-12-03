@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and inheritance concept</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="d1"></p>
+    <p id="s1"></p>
+    <script>
+        class car{
+            constructor(name,year){
+                this.name=name;
+                this.year=year;
+            }
+            age(){
+                const date=new Date();//currect date 
+                return date.getFullYear()-this.year;
+            }
+        }
+        const mycar=new car("ford",1999);
+        document.getElementById("demo").innerHTML="My car is :"+mycar.age()+"Years old"
+        // inheritance
+
+        class c1{
+            constructor(brand){
+                this.brand=brand
+            }
+            present(){
+                return 'i have a '+this.brand
+            }
+        }
+        class c2 extends c1{
+            constructor(brand,mod){
+                super(brand);
+                this.model=mod
+            }
+            show(){
+                return this.present()+", it is a "+this.model;
+            }
+        }
+        const ob1=new c2("frod","mustang");
+        document.getElementById("d1").innerHTML=ob1.show();
+
+        // static 
+
+        class c3{
+            constructor(name){
+                this.name=name
+            }
+            static hello(x){
+                return "hello!!! "+x.name;
+            }
+        }
+        const ob2=new c3("manas");
+        document.getElementById("s1").innerHTML=c3.hello(ob2);
+        document.write("Hello");
+    </script>
+</body>
+</html>

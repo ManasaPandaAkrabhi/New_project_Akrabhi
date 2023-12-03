@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>in js array  is a collection of Element acessesed by it's index number</h1>
+    <script>
+        const ar=["banana",76,"apple"];
+        document.write(ar[0]);
+        document.write('<br />');
+        //tostring()
+        let s=ar.toString();
+        document.write(s);
+        document.write('<br />');
+        document.write("now type of ar become:"+typeof(s));
+        document.write('<br />');
+        //join()
+        document.write(ar.join("::"))
+        document.write('<br />');
+        //pop():remove last element of array
+        document.write("Poped elemet is:"+ar.pop());
+        document.write('<br />');
+        document.write('array is:'+ar);
+        document.write('<br />');
+        //push():add  a new elemet in end of an array
+        document.write(ar.push(23,45,46));//push return (lastindex+1) position
+        document.write('<br />');
+        document.write('new array is:'+ar);
+        //shift()
+        document.write('<br />');
+        document.write("Shift remove elemet from first element is:"+ar.shift());
+        //unshift()
+        document.write('<br />');
+        document.write(ar.unshift(78));
+        document.write('<br />');
+        document.write('new array is:'+ar);
+        //delete :is a operator
+        document.write('<br />');
+        document.write(delete ar[2]);
+        document.write('<br />');
+        document.write('array is:'+ar);
+        //delete can not change array length  
+        document.write('<br />');
+        document.write('Length of array is:'+ar.length);
+        //concat()
+        const a=[91,133,7];
+        document.write('<br />');
+        document.write('new array is:'+a);
+        document.write('<br />');
+        document.write('after concat new array is:'+ar.concat(a));
+        //sort():to sort alphabetically
+        document.write('<br />');
+        document.write(a.sort());//it modify array
+        //splice():used to add new item to array
+        document.write('<br />');
+        document.write(a.splice(1,0,34,54,33,21));
+        document.write('<br />');
+        document.write('array become:'+a);
+        //slice():used to slice out a piece from an array
+        document.write('<br />');
+        document.write('array slice after 2 index:'+a.slice(2));
+        document.write('<br />');
+        document.write("array element from 1to 4 index:"+a.slice(1,5))
+        //reverse():it reverse element in source array
+        document.write('<br/>');
+        document.write('array after reverse:'+a.reverse());
+        document.write('<br />');
+
+        // array Sorting
+        function fun(a,b)
+        {
+            return a-b;
+        }
+        document.write(a.sort(fun));
+
+    </script>
+</body>
+</html>

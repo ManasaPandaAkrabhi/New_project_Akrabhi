@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Sets and maps</title>
+    </head>
+    <body>
+        <script>
+            //const letters=new Set(['a','b','c','d']);
+            const letters=new Set();
+            letters.add('a');
+            letters.add('b');
+            letters.add('c');
+           document.write("length of set is:"+letters.size);
+           let text=""
+            letters.forEach(element => {
+                text+=element+"<br>"
+            });
+            document.write("<br>"+"elements in set are:"+"<br>"+text);
+            let a=letters.has('a');
+            document.write(a+"<br>");
+            document.write(letters.delete('a')+"<br>");
+            let t1=""
+            letters.forEach(value=>{
+                t1+=value+"<br>"
+            });
+            document.write(t1);
+
+            //maps
+           // const fruit=new Map(["apple",300],["orange",200],["painapple",120]);
+           const fruit=new Map();
+           fruit.set("apple",300);
+           fruit.set("orange",200);
+           fruit.set("pianapple",120);
+            document.write(fruit.size);
+            text=""
+            fruit.forEach((key,value) => {
+                text+=key+" "+value+"<br>";
+            });
+            document.write("<br>"+text);
+            fruit.set("apple",400);
+            text=""
+            fruit.forEach((key,value) => {
+                text+=key+" "+value+"<br>";
+            });
+            document.write("<br>"+text);
+            document.write(fruit.get("pianapple")+"<br>");
+            document.write(fruit.delete("apple"));
+            text=""
+            fruit.forEach((key,value) => {
+                text+=key+" "+value+"<br>";
+            });
+            document.write("<br>"+text);
+            document.write("<br>");
+            fruit.set("mango",120);
+            t1=""
+           for(x in fruit.entries()){
+            t1+=x+"<br>"
+           }
+            document.write("<br>"+t1);
+        </script>
+    </body>
+</html>

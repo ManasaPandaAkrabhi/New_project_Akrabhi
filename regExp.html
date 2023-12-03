@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <script>
+        let text="Visit W3School";
+        let n=text.search(/o/g);
+        let n1=text.replace(/ool/i,"pp");
+        document.write(n+"<br>"+n1+"<br>"+text);
+        let t1="is it is it the the we are!";
+        let r1=t1.match(/[ish]/g);
+        let r2=t1.replaceAll("is","are");
+        document.write("<br>"+r1+"<br>"+r2);
+        let t2="A quick brown wnoo 100%7";
+        let r3=text.match(/\d/g);
+        let s=t2.match(/\s/g);
+        document.write("<br>"+r3+"<br>"+s);
+        let ss=t2.search(/\bwn/);
+        let sss=t2.search(/wn\b/);
+        document.write("<br>"+"word end with wn at index:"+sss+"<br>");
+        document.write("word end with wn is at index:"+ss);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            this is day three 
+        </title>
+        <script>
+            function hello()
+            {
+                confirm("hello");
+            }
+            function fullname(fname="manas",lname="panda")
+            {
+                var a=fname+"-"+lname;
+                return a;
+            }
+            function f1()
+            {
+            var fn=fullname("ram","hari");
+            document.write(fn);
+            }
+            function sum(math,eng,sc)
+            {
+                var math=prompt("math mark:");
+                var eng=prompt("english mark");
+                var sc=prompt("science mark");
+                var s=math+eng+sc;
+               percentage(s);
+            }
+            function percentage(tt)
+            {
+                var per=(tt/300)*100;
+                confirm("percentage is:"+per);
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="hello()">click me</button><br>
+        <p ondblclick="f1()">hello </p>
+        <button onclick="sum()">sum</button>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=0.2+0.1;
+        document.write(x);
+        document.write("<br>");
+        let z=(0.2*10+0.1*10)/10;
+        document.write("0.1+0.2="+z);
+        document.write("<br>");
+         x=10;
+         y=20;
+         z=x+y;
+        document.write(z);
+        document.write("<br>");
+        document.write("The result is:"+x+y);
+        a="30";
+        document.write("<br>");
+        let result=x+y+a;
+        document.write(result);
+        document.write("<br>");
+        x="100";
+        y="10";
+        p=x+y;
+        c=x-y;
+        z=x/y;
+        b=x*y;
+        document.write("x="+x+"<br>"+"y="+y+"<br>");
+        document.write("x+y="+p+"<br>"+"x-y="+c+"<br>"+"x/y="+z+"<br>"+"x*y="+b+"<br>");
+        //number methods
+        x=9.656;
+        document.write(x.toPrecision());
+        document.write("<br>");
+        document.write(x.toPrecision(2));
+        document.write("<br>");
+        document.write(x.toPrecision(3));
+        document.write("<br>");
+        document.write(x.toPrecision(6));
+        document.write("<br>");
+        document.write(Number(true)+"<br>");
+        document.write(Number(false)+"<br>");
+        document.write(Number("10")+"<br>");
+        document.write(Number("john")+"<br>");
+        document.write(Number(new Date("1970-01-02"))+"<br>");
+        //Date()
+        const d=new Date();
+        const f=new Date(2018,15,25,10,33,30);
+        const q=new Date(2018,15,25,10,33,30);
+        const yr=new Date(99,11,10,12,34,56);
+        document.write(d+"<br>"+f+"<br>"+q+"<br>"+yr+"<br>");
+        document.write("toDateString ="+yr.toDateString()+"<br>");
+        document.write("UTC format="+yr.toUTCString()+"<br>");
+        document.write("ISO format="+yr.toISOString()+"<br>");
+        document.write("date="+yr.getDate()+"<br>");
+        document.write("fullyear="+yr.getFullYear()+"<br>");
+        document.write("Day="+yr.getDay()+"<br>");
+        //similarly we can also set 
+        d.setDate(23);
+        d.setFullYear(1923);
+        d.setMonth(11)
+        document.write(d+"<br>");
+        
+        //math()
+        document.write("Math.E="+Math.E+"<br>"+"Math.PI="+Math.PI+"<br>"+"Math.LN10="+Math.LN10+"<br>"+"Math.LN2="+Math.LN2+"<br>"+"Math.LOG10E="+Math.LOG10E+"<br>"+"Math.LOGE="+Math.LOG2E+"<br>");
+        document.write("Math.round(3.7)="+Math.round(3.7)+"<br>"+"Math.floor(3.7)="+Math.floor(3.7)+"<br>");
+        document.write("Math.ceil(3.7)="+Math.ceil(3.7)+"<br>"+"Math.trunc(3.7)="+Math.trunc(3.7)+"<br>");
+        document.write("Math.sign(-4)="+Math.sign(-4)+"<br>"+"Math.sign(4)="+Math.sign(4)+"<br>"+"Math.sign(0)="+Math.sign(0)+"<br>");
+        document.write(Math.min(0,-2,-4,-5,-7,-80,8)+"<br>"+Math.max(2,54,65,32,0,98));
+   </script>
+</body>
+</html>

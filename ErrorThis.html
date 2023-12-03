@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors of JavaScript</title>
+</head>
+<body>
+    <p>Enter a number in between 5 to 10</p>
+    <input type="text" id="demo">
+    <button type="button" onclick="myFunction()">TEST NOW</button>
+    <p id="ctc"></p>
+    <p id="pgr"></p>
+    <script>
+        function myFunction()
+        {
+            let message=document.getElementById("demo").value;
+            try{
+                    if(message.trim()=="")throw "Empty";
+                    if(isNaN(message)) throw "Not a number"
+                    message=Number(message);
+                    if(message<5) throw "Number is low";
+                    if(message>10) throw "Number is High";
+                    else
+                        throw "Number is in between 5 to 10";
+            }
+            catch(err){
+                document.getElementById("ctc").innerHTML=err;
+            }
+            finally{
+                document.getElementById("demo").value="";
+            }
+        }
+
+        // this keyword in js
+        const person={
+            firstName:"Manas",
+            lastName:"panda",
+            id:5566,
+            fullName: function()
+            {
+                return this.firstName+" "+this.lastName;
+            }
+        };
+        document.write(person.fullName());
+    </script>
+</body>
+</html>

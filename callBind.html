@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use of call() and bind()</title>
+</head>
+<body>
+    <script>
+        const person={
+            fullname:function()
+            {
+                return this.firstName+" "+this.lastName;
+            }
+        };
+        const person1={
+            firstName:"manas",
+            lastName:"panda",
+        }
+        let x=person.fullname.call(person1);
+        document.write(x);
+
+        // bind()
+        const p1={
+            fName:"subudhi",
+            lname:"patra",
+            fullname:function()
+            {
+                return this.fName+" "+this.lname;
+            }
+        };
+        const m1={
+            fName:"sibu",
+            lname:"pati",
+        };
+        let fullName=p1.fullname.bind(m1)
+        document.write("<br>"+fullName());
+        document.write(m1);
+    </script>
+</body>
+</html>

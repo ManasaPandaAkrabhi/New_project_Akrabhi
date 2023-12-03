@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ar=[45,9,4,16,25];
+        let text="";
+        for(let i in ar)
+        {
+            text+=ar[i]+"<br>";
+            //document.write(ar[i]+"<br>");
+        }
+        document.write(text);
+        //forEach()
+        const number=[45,9,4,5,88]
+        text=0;
+        number.forEach(sum);
+        function sum(value)
+        {
+            text+=value;
+        }
+        document.write("sum of numbers is="+text+"<br>");
+        number.forEach(myFun);
+        function myFun(item,i,ar)
+        {
+            number[i]=item*10;
+        }
+        document.write(number);
+        //for of
+        document.write("<br>");
+        const cars=["BMW","VOLVO","MINI"];
+        let tex="";
+        document.write("Cars collection:"+"<br>");
+        for(i of cars)
+        {
+            tex+=i+"<br>";
+        }
+        document.write(tex);
+      // document.write("<br>");
+        let language="JavaScript";
+        let tx="";
+        for(i of language)
+        {
+            tx+=i+"<br>";
+        }
+        document.write(tx);
+        document.write("<br>")
+        langua=[1,2,3,4,5]
+        langua.forEach((element)=>{
+            document.write(element);
+        })
+        // array.from
+        document.write("<br>")
+        let arr=Array.from(language);
+        document.write(arr);
+        //array.map
+        document.write("<br>")
+        let a1=langua.map((value,index)=>{
+            document.write(value,index+"<br>")
+            return value*index
+        })
+        document.write(a1);
+        //filter
+        document.write("<br>")
+        let c1=[2,45,67,32,11,33,44,444,55,9,42]
+        document.write("Array element are:"+c1+"<br>")
+        let a2=c1.filter((item)=>{
+            if(item%2==0)
+            {
+                return item;
+            }
+        })
+        document.write(" Even element are:"+a2);
+        //reduce()
+        document.write("<br>")
+        let a3=c1.reduce((a1,a2)=>{
+            return a1+a2;
+        })
+        document.write("sum of element are :"+a3);
+        document.write("<br>"+"Type is :"+typeof(a3))
+        //keep adding number to array till 0 is added
+        /*let ar1=[]
+        let a=1;
+        do{
+            a= prompt("enter a number :")
+            a=Number.parseInt(a);
+            ar1.push(a);
+        }while(a!=0)
+        document.write("array is:"+ar1);*/
+        //use reduce to clculate factorial
+        document.write("<br>")
+        ar1=[2,3,4,5,6,7,8]
+        document.write("Array is:"+ar1);
+        a2=ar1.reduce((i1,i2)=>{
+            return i1*i2;
+        })
+        document.write("<br>"+"Factorial :"+a2);
+        //guess number
+        let x=Math.floor((Math.random()*100));
+        document.write("<br>"+"number is:"+x);
+        document.write("<br>");
+        let count=0,a;
+        do{
+            a=prompt("enter number:");
+            count++;
+            if(a==x)
+            {
+                document.write("You guess write number by takeing "+count+" chance"+"<br>");
+                document.write("your score is:"+(100-count));
+                break;
+            }
+            else if(a>x)
+            {
+                alert("choose large number");
+            }
+            else
+            {
+                alert("choose small number");
+            }
+        }while(1)
+    </script>
+</body>
+</html>

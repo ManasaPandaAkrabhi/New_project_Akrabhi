@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Concept</title>
+</head>
+<body>
+    <!-String is zero or more character Written inside quorts.> 
+    <script>
+        let s1='manas';
+        //let s2="manas";
+       let s2=new String("manas");
+        if(s1===s2)
+            document.write("true = = =");
+        else if(s1==s2)
+            document.write("true = =");
+        else
+             document.write("false");
+        
+         document.write('<br />');
+        let str='my name is "manas panda"';
+        document.write(str);
+        document.write('<br />');
+        let str1="my name is 'manas panda'";
+        document.write(str1);
+
+        //Template literal
+        
+        document.write('<br />');
+         s2="panda"
+        let sentc=`first name : ${s1} <br /> last name : ${s2}`;
+        document.write(sentc);  
+
+        //String Methods
+
+        document.write('<br />');
+        document.write(`length of ${s1}:`+s1.length);
+        document.write('<br />');
+        
+        str = "Apple,Banana,Kiwi";
+        //slice():to slice a string it have both - and + inedx i.e from staring and ending indexing
+        document.write(str.slice(7,13));
+        document.write('<br />');
+        document.write(str.slice(7));
+        document.write('<br />');
+        document.write(str.slice(-4));//if a parameter is negative the position is coounted from the end of string
+        document.write('<br />');
+        document.write(str.slice(-12,-6));
+        document.write('<br />');
+        //substring():similar to slice but staring index and endng index less than 0 is treated as 0
+        document.write("as -3,-6 index not present it give a empty string ::::"+str.substring(-3,-6));
+        document.write('<br />');
+        //substr(a,b):first parameter(a)specified index and second(b)specified number of characeter after that index
+        document.write(str.substr(2,5));
+        document.write('<br />');
+        document.write(str.slice(-4));// negative the position count from end 
+        //replace():replace a specified value with another value in a string
+        document.write('<br />');
+        document.write(str.replace("Apple","Mango"));//will not change the original string it return a new string
+        document.write('<br />');
+        document.write(str);
+        document.write('<br />');
+        //by default replace method is case sensitive means Manas and manas are not same so to change it we can use "/i"
+        document.write(str.replace(/apple/i,"mango"));
+        document.write('<br />');
+        //by default it replace first occurance of string if we want to replace every occurance the we can use /g
+        let s3="micro is small but micro is greater then nano";
+        document.write(s3.replace("micro","cent"));
+        document.write('<br>');
+        document.write(s3.replace(/micro/g,"cent"));
+        // to replace every occurance we can also used replaceAll() which is introduced in 2021
+        //toUppercase():to convert a string to upper case
+        //toLowerCase():to convert a string to lower case 
+        //concat()
+        document.write("<br>");
+        document.write(s1.concat(" kumar ",s2));
+    </script>
+</body>
+</html>
